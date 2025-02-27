@@ -24,12 +24,12 @@ static int patestCallback(const void *inputBuffer, void *outputBuffer,
     *out++ = data->left_phase;  /* left */
     *out++ = data->right_phase; /* right */
     /* Generate simple sawtooth phaser that ranges between -1.0 and 1.0. */
-    data->left_phase += 0.01f;
+    data->left_phase += 0.02f;
     /* When signal reaches top, drop back down. */
     if (data->left_phase >= 1.0f)
       data->left_phase -= 2.0f;
     /* higher pitch so we can distinguish left and right. */
-    data->right_phase += 0.05f;
+    data->right_phase += 0.04f;
     if (data->right_phase >= 1.0f)
       data->right_phase -= 2.0f;
   }
